@@ -1,0 +1,3 @@
+git+https://github.com/inducer/cgen
+git+https://github.com/inducer/codepy
+git+https://github.com/opesci/devito
