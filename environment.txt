@@ -10,3 +10,4 @@ psutil>=5.1.0
 py-cpuinfo
 dask
 distributed
+swig
