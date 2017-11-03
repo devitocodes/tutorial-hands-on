@@ -1,0 +1,24 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows,chains,positioning,fit,backgrounds,calc,shapes,
+  shadows,scopes,decorations.markings,plotmarks}
+\usepackage{pdfcomment}
+
+\begin{document}
+
+\tikzstyle{dot_black} = [draw=black, circle, inner sep=0pt,minimum size=6pt, fill=black]
+\tikzstyle{dot_red} = [draw=red, circle, inner sep=0pt,minimum size=6pt, fill=red]
+
+\begin{tikzpicture}[font=\scriptsize]
+
+  \node(center)[dot_black, label=above:{$f(x, y)$}] {};
+
+  \node(x_left)[dot_red, left=3.6em of center, label=above:{$f(x-h_x, y)$}] {};
+
+  \path[draw, thick, dashed] (center) -- (x_left);
+
+\end{tikzpicture}
+
+\end{document}

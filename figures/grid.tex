@@ -1,0 +1,27 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows,chains,positioning,fit,backgrounds,calc,shapes,
+  shadows,scopes,decorations.markings,plotmarks}
+\usepackage{pdfcomment}
+
+\begin{document}
+
+\tikzstyle{dot} = [draw=black, circle, inner sep=0pt,minimum size=3pt, fill=black]
+
+\begin{tikzpicture}[font=\scriptsize, node distance=5em]
+
+  \node(origin)[dot, label=below:{\texttt{(0, 0)}}] {};
+
+  \node(top)[dot, above=of origin, label=above:{\texttt{extent[1]}}] {};
+
+  \node(right)[dot, right=of origin, label=below:{\texttt{extent[0]}}] {};
+
+  \node(top_right)[dot, right=of top, label=above:{\texttt{extent}}] {};
+
+  \path[draw, thick] (origin) -- (top) -- (top_right) -- (right) -- (origin);
+
+\end{tikzpicture}
+
+\end{document}
